@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -37,14 +37,15 @@
             background: rgba(17, 24, 39, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
-            border-color: rgba(59, 130, 246, 0.4);
-            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.3);
         }
         .gradient-text {
-            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -54,6 +55,14 @@
         }
         .gradient-btn:hover {
             background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+        .whatsapp-gradient {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        .whatsapp-gradient:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
         }
     </style>
 </head>
@@ -82,7 +91,7 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <a href="https://wa.me/" target="_blank" class="gradient-btn px-5 py-2.5 rounded-xl font-medium text-sm text-white transition-all shadow-lg shadow-blue-500/20 flex items-center gap-2">
+                <a href="https://wa.me/923049173499?text=Hi%20Esha%2C%20I%20checked%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20web%20development%20project%20with%20you." target="_blank" class="whatsapp-gradient px-5 py-2.5 rounded-xl font-medium text-sm text-white transition-all shadow-lg flex items-center gap-2">
                     <i class="fa-brands fa-whatsapp text-lg"></i> Let's Talk
                 </a>
             </div>
@@ -91,9 +100,9 @@
 
     <!-- HERO SECTION -->
     <section class="pt-36 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-semibold text-blue-400 mb-8 w-fit border border-blue-500/30">
-            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-            OPEN FOR FREELANCE & CLIENT PROJECTS
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-semibold text-emerald-400 mb-8 w-fit border border-emerald-500/30">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            AVAILABLE FOR FREELANCE & CLIENT PROJECTS
         </div>
 
         <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight heading-font leading-tight mb-6">
@@ -105,11 +114,11 @@
         </p>
 
         <div class="flex flex-wrap gap-4 mb-16">
-            <a href="#projects" class="gradient-btn px-8 py-4 rounded-xl font-semibold text-white shadow-xl shadow-blue-500/20 flex items-center gap-3 transition-transform hover:-translate-y-0.5">
+            <a href="#projects" class="gradient-btn px-8 py-4 rounded-xl font-semibold text-white shadow-xl flex items-center gap-3 transition-transform hover:-translate-y-0.5">
                 <i class="fa-solid fa-rocket"></i> View Live Deployments
             </a>
-            <a href="mailto:eshajawaid537@gmail.com" class="glass-card px-8 py-4 rounded-xl font-semibold text-gray-200 hover:text-white flex items-center gap-3 transition-all hover:bg-gray-800">
-                <i class="fa-regular fa-paper-plane"></i> Contact via Email
+            <a href="https://wa.me/923049173499?text=Hi%20Esha%2C%20I%20checked%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20web%20development%20project%20with%20you." target="_blank" class="glass-card px-8 py-4 rounded-xl font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-3 transition-all hover:bg-emerald-950/30 border-emerald-500/30">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Chat on WhatsApp
             </a>
         </div>
 
@@ -117,19 +126,19 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-gray-800/80">
             <div class="glass-card p-6 rounded-2xl">
                 <div class="text-3xl font-bold text-blue-400 heading-font mb-1">3.46</div>
-                <div class="text-xs text-gray-400 font-medium">Academic CGPA (BS CS)</div>
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">Academic CGPA (BS CS)</div>
             </div>
             <div class="glass-card p-6 rounded-2xl">
                 <div class="text-3xl font-bold text-purple-400 heading-font mb-1">100%</div>
-                <div class="text-xs text-gray-400 font-medium">Mobile & Speed Optimized</div>
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">Mobile & Speed Optimized</div>
             </div>
             <div class="glass-card p-6 rounded-2xl">
                 <div class="text-3xl font-bold text-indigo-400 heading-font mb-1">Live</div>
-                <div class="text-xs text-gray-400 font-medium">Production Web Apps</div>
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">Production Web Apps</div>
             </div>
             <div class="glass-card p-6 rounded-2xl">
-                <div class="text-3xl font-bold text-pink-400 heading-font mb-1">Certified</div>
-                <div class="text-xs text-gray-400 font-medium">SEO & Freelancing</div>
+                <div class="text-3xl font-bold text-emerald-400 heading-font mb-1">Certified</div>
+                <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">SEO & Freelancing</div>
             </div>
         </div>
     </section>
@@ -148,7 +157,7 @@
                 </div>
                 <div>
                     <h4 class="font-bold text-lg heading-font">HTML5 & CSS3</h4>
-                    <p class="text-xs text-gray-400">Semantic Markup & Styling</p>
+                    <p class="text-xs text-gray-400">Semantic Markup & Responsive Styling</p>
                 </div>
             </div>
 
@@ -168,7 +177,7 @@
                 </div>
                 <div>
                     <h4 class="font-bold text-lg heading-font">React & Tailwind</h4>
-                    <p class="text-xs text-gray-400">Modern UI Frameworks</p>
+                    <p class="text-xs text-gray-400">Modern Component Frameworks</p>
                 </div>
             </div>
 
@@ -188,7 +197,7 @@
                 </div>
                 <div>
                     <h4 class="font-bold text-lg heading-font">Vercel Deployment</h4>
-                    <p class="text-xs text-gray-400">Cloud Hosting & Optimization</p>
+                    <p class="text-xs text-gray-400">Cloud Hosting & Performance Optimization</p>
                 </div>
             </div>
 
@@ -198,7 +207,7 @@
                 </div>
                 <div>
                     <h4 class="font-bold text-lg heading-font">SEO Strategy</h4>
-                    <p class="text-xs text-gray-400">DigiSkills Certified</p>
+                    <p class="text-xs text-gray-400">DigiSkills Certified Practitioner</p>
                 </div>
             </div>
         </div>
@@ -208,7 +217,7 @@
     <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="mb-12">
             <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Portfolio</span>
-            <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Featured Live Projects</h2>
+            <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Featured Live Deployments</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -299,7 +308,7 @@
             </div>
 
             <div class="glass-card p-6 rounded-2xl">
-                <div class="text-2xl font-bold text-pink-400 heading-font mb-3">03</div>
+                <div class="text-2xl font-bold text-emerald-400 heading-font mb-3">03</div>
                 <h3 class="text-lg font-bold mb-2">Optimization & Launch</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">
                     Executing cross-browser testing, mobile optimization, SEO structure checks, and fast deployments via Vercel.
@@ -337,7 +346,7 @@
             </details>
 
             <details class="glass-card rounded-2xl p-6 group cursor-pointer">
-                <summary class="font-bold text-lg flex justify-between items-center list-none">
+                <summaryclass="font-bold text-lg flex justify-between items-center list-none">
                     Will the website be fully mobile responsive?
                     <span class="text-blue-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
                 </summary>
@@ -348,8 +357,50 @@
         </div>
     </section>
 
-    <!-- EDUCATION / ACADEMICS & CONTACT -->
+    <!-- EDUCATION / ACADEMICS -->
     <section id="about" class="py-20 px-6 max-w-7xl mx-auto">
         <div class="mb-12">
             <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Background</span>
-            <h2 class="text-3xl md:text-4xl font-bold heading-fo
+            <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Education & Credentials</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="glass-card p-8 rounded-2xl">
+                <span class="text-xs text-blue-400 font-bold uppercase tracking-wider">Undergraduate Degree</span>
+                <h3 class="text-2xl font-bold heading-font mt-2 mb-1">BS Computer Science</h3>
+                <p class="text-gray-400 text-sm mb-4">The Women University Multan</p>
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-semibold">
+                    <i class="fa-solid fa-graduation-cap"></i> Cumulative GPA: 3.46 / 4.00
+                </div>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl">
+                <span class="text-xs text-purple-400 font-bold uppercase tracking-wider">Professional Certifications</span>
+                <h3 class="text-2xl font-bold heading-font mt-2 mb-1">DigiSkills Training Program</h3>
+                <p class="text-gray-400 text-sm mb-4">Ministry of IT & Telecom Pakistan</p>
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-purple-500/10 text-purple-400 text-xs font-semibold">
+                    <i class="fa-solid fa-certificate"></i> Certified: SEO & Digital Freelancing
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="border-t border-gray-800/80 py-12 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+            <p class="text-sm font-bold heading-font text-white">ESHA JAWAID</p>
+            <p class="text-xs text-gray-500 mt-1">Creative UI/UX Developer & Frontend Specialist</p>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-gray-400">
+            <a href="mailto:eshajawaid537@gmail.com" class="hover:text-blue-400 transition-colors"><i class="fa-regular fa-envelope"></i> Email</a>
+            <a href="https://wa.me/923049173499?text=Hi%20Esha%2C%20I%20checked%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20web%20development%20project%20with%20you." target="_blank" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-whatsapp"></i> +92 304 9173499</a>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP ACTION BUTTON -->
+    <a href="https://wa.me/923049173499?text=Hi%20Esha%2C%20I%20checked%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20web%20development%20project%20with%20you." target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-emerald-500 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition-all duration-300 shadow-emerald-500/50">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
