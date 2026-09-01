@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esha Jawaid — Senior Web Developer & CS Scholar</title>
+    <title>Esha Jawaid — Full-Stack Web Developer & CS Scholar</title>
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -11,7 +11,7 @@
     <!-- Font Awesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Google Fonts (Inter & Plus Jakarta Sans) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,6 +20,11 @@
         * { font-family: 'Plus Jakarta Sans', sans-serif; }
         body { background-color: #07090e; color: #f8fafc; }
         
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+
         .glass-card { 
             background: rgba(15, 23, 42, 0.6); 
             backdrop-filter: blur(16px); 
@@ -27,11 +32,15 @@
             border: 1px solid rgba(255, 255, 255, 0.08); 
         }
         
+        .glass-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         .glass-card-hover:hover {
             background: rgba(30, 41, 59, 0.7);
             border-color: rgba(99, 102, 241, 0.4);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.2);
         }
 
         .glass-nav { 
@@ -46,31 +55,21 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .gradient-border {
-            position: relative;
-            border-radius: 1rem;
-            background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(168,85,247,0.2));
-            padding: 1px;
-        }
-
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #07090e; }
         ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #334155; }
     </style>
 </head>
-<body class="antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+<body class="antialiased selection:bg-indigo-500 selection:text-white overflow-x-hidden bg-grid-pattern">
 
-    <!-- Background Ambient Glows -->
+    <!-- Ambient Background Glows -->
     <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
     <div class="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[160px] pointer-events-none -z-10"></div>
 
     <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            
-            <!-- Brand Logo -->
             <a href="#" class="flex items-center gap-3.5 group">
                 <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-purple-500 flex items-center justify-center font-extrabold text-xl text-white shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform">
                     EJ
@@ -81,16 +80,17 @@
                 </div>
             </a>
 
-            <!-- Navigation Links -->
+            <!-- Desktop Nav Links -->
             <div class="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-300 uppercase tracking-wider">
                 <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
                 <a href="#skills" class="hover:text-indigo-400 transition-colors">Capabilities</a>
                 <a href="#projects" class="hover:text-indigo-400 transition-colors">Portfolio</a>
-                <a href="#experience" class="hover:text-indigo-400 transition-colors">Background</a>
+                <a href="#workflow" class="hover:text-indigo-400 transition-colors">Workflow</a>
+                <a href="#faq" class="hover:text-indigo-400 transition-colors">FAQ</a>
                 <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
             </div>
 
-            <!-- Action CTAs -->
+            <!-- Action Buttons -->
             <div class="flex items-center gap-3">
                 <button onclick="copyEmail()" class="hidden sm:flex px-4 py-2.5 rounded-xl border border-slate-700/80 hover:border-indigo-500 bg-slate-900/60 text-xs font-semibold text-slate-300 transition-all items-center gap-2">
                     <i class="fa-regular fa-copy text-indigo-400"></i> Copy Email
@@ -106,20 +106,20 @@
     <section id="about" class="max-w-7xl mx-auto px-6 pt-24 pb-20 flex flex-col items-center text-center relative">
         <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-bold mb-8 backdrop-blur-md">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            AVAILABLE FOR FREELANCE & FULL-TIME ROLES
+            OPEN FOR FREELANCE & CLIENT PROJECTS
         </div>
 
         <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight max-w-5xl leading-[1.15] text-white">
-            Architecting Scalable <span class="text-gradient">Digital Experiences</span> & Modern Web Applications
+            Building High-Impact <span class="text-gradient">Modern Web Applications</span> & UI Solutions
         </h1>
 
         <p class="mt-6 text-slate-400 text-base sm:text-lg md:text-xl max-w-3xl font-normal leading-relaxed">
-            Full-Stack Web Developer & Computer Science Scholar (3.46 CGPA). Specializing in high-converting luxury storefronts, enterprise digital portals, responsive UI architecture, and SEO strategies.
+            Full-Stack Web Developer & Computer Science Scholar (3.46 CGPA). Crafting high-converting storefronts, corporate web portals, and scalable digital interfaces with precision engineering.
         </p>
 
         <div class="mt-10 flex flex-wrap gap-4 justify-center items-center">
             <a href="#projects" class="px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 font-bold text-sm text-white transition-all shadow-xl shadow-indigo-600/30 flex items-center gap-2">
-                <i class="fa-solid fa-rocket"></i> Explore Work
+                <i class="fa-solid fa-rocket"></i> View Live Deployments
             </a>
             <a href="https://github.com/eshajawaid537-jpg" target="_blank" class="px-8 py-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 font-bold text-sm text-slate-200 transition-all backdrop-blur-md flex items-center gap-2">
                 <i class="fa-brands fa-github text-indigo-400 text-lg"></i> GitHub Profile
@@ -134,11 +134,11 @@
             </div>
             <div class="p-6 rounded-2xl glass-card text-center">
                 <div class="text-3xl sm:text-4xl font-extrabold text-purple-400">100%</div>
-                <div class="text-[11px] text-slate-400 uppercase tracking-widest font-bold mt-2">Responsive Quality</div>
+                <div class="text-[11px] text-slate-400 uppercase tracking-widest font-bold mt-2">Mobile & Speed Optimized</div>
             </div>
             <div class="p-6 rounded-2xl glass-card text-center">
-                <div class="text-3xl sm:text-4xl font-extrabold text-pink-400">10+</div>
-                <div class="text-[11px] text-slate-400 uppercase tracking-widest font-bold mt-2">Web Deployments</div>
+                <div class="text-3xl sm:text-4xl font-extrabold text-pink-400">Live</div>
+                <div class="text-[11px] text-slate-400 uppercase tracking-widest font-bold mt-2">Production Web Apps</div>
             </div>
             <div class="p-6 rounded-2xl glass-card text-center">
                 <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">Certified</div>
@@ -147,11 +147,11 @@
         </div>
     </section>
 
-    <!-- Technical Stack & Capabilities -->
+    <!-- Technical Stack -->
     <section id="skills" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60">
         <div class="mb-14 text-center md:text-left">
-            <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest block mb-1">Capabilities</span>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Technical Stack & Core Strengths</h2>
+            <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest block mb-1">Tech Architecture</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Technical Stack & Core Capabilities</h2>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -159,7 +159,7 @@
                 <i class="fa-brands fa-html5 text-orange-500 text-3xl group-hover:scale-110 transition-transform"></i>
                 <div>
                     <h4 class="text-sm font-bold text-white">HTML5 & CSS3</h4>
-                    <p class="text-[10px] text-slate-400 font-medium">Semantic Structure</p>
+                    <p class="text-[10px] text-slate-400 font-medium">Semantic Markup</p>
                 </div>
             </div>
 
@@ -167,7 +167,7 @@
                 <i class="fa-brands fa-js text-yellow-400 text-3xl group-hover:scale-110 transition-transform"></i>
                 <div>
                     <h4 class="text-sm font-bold text-white">JavaScript</h4>
-                    <p class="text-[10px] text-slate-400 font-medium">ES6+ / Async Logic</p>
+                    <p class="text-[10px] text-slate-400 font-medium">ES6+ / Dynamic DOM</p>
                 </div>
             </div>
 
@@ -198,7 +198,7 @@
             <div class="p-5 rounded-2xl glass-card flex flex-col items-center text-center gap-3 hover:border-indigo-500/50 transition-all group">
                 <i class="fa-solid fa-chart-line text-emerald-400 text-3xl group-hover:scale-110 transition-transform"></i>
                 <div>
-                    <h4 class="text-sm font-bold text-white">SEO & Strategy</h4>
+                    <h4 class="text-sm font-bold text-white">SEO Strategy</h4>
                     <p class="text-[10px] text-slate-400 font-medium">DigiSkills Certified</p>
                 </div>
             </div>
@@ -210,10 +210,9 @@
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
                 <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest block mb-1">Portfolio</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Featured Deployments</h2>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Featured Live Projects</h2>
             </div>
 
-            <!-- Category Filter Tabs -->
             <div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-slate-900/80 border border-slate-800">
                 <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 rounded-lg bg-indigo-600 text-white text-xs font-bold transition-all">All Projects</button>
                 <button onclick="filterProjects('agency')" class="filter-btn px-4 py-2 rounded-lg text-slate-400 text-xs font-bold hover:text-white transition-all">Agency</button>
@@ -231,11 +230,11 @@
                         <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Agency Portal</span>
                     </div>
                     <h3 class="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">VORTEX Digital</h3>
-                    <p class="text-xs text-indigo-400 font-semibold mt-1 mb-4">Next-Gen Transformation Platform</p>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Ultra-sleek agency portal engineered with interactive service matrices, optimized DOM structures, and fast UI responsiveness.</p>
+                    <p class="text-xs text-indigo-400 font-semibold mt-1 mb-4">Digital Transformation Platform</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Ultra-sleek agency portal engineered with interactive service matrices, glassmorphism aesthetics, and clean performance optimization.</p>
                 </div>
                 <div class="flex gap-3 pt-4 border-t border-slate-800/80">
-                    <a href="https://vortex-digital-alpha.vercel.app/" target="_blank" class="flex-1 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs text-center transition-all shadow-md shadow-indigo-600/20">Live Site <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
+                    <a href="https://vortex-digital-alpha.vercel.app/" target="_blank" class="flex-1 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs text-center transition-all shadow-md shadow-indigo-600/20">Live Preview <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
                     <a href="https://github.com/eshajawaid537-jpg/vortex-digital" target="_blank" class="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs text-center transition-all"><i class="fa-brands fa-github text-sm"></i></a>
                 </div>
             </div>
@@ -249,10 +248,10 @@
                     </div>
                     <h3 class="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">ESHA LUXEE</h3>
                     <p class="text-xs text-purple-400 font-semibold mt-1 mb-4">Luxury E-Commerce Storefront</p>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">High-converting luxury fashion storefront with fluid layouts, product cards, dynamic cart interactions, and high aesthetic polish.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">High-converting luxury fashion storefront with responsive product showcases, fluid UI micro-interactions, and cart workflow layout.</p>
                 </div>
                 <div class="flex gap-3 pt-4 border-t border-slate-800/80">
-                    <a href="https://esha-luxee.vercel.app/" target="_blank" class="flex-1 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs text-center transition-all shadow-md shadow-indigo-600/20">Live Site <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
+                    <a href="https://esha-luxee.vercel.app/" target="_blank" class="flex-1 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs text-center transition-all shadow-md shadow-indigo-600/20">Live Preview <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
                     <a href="https://github.com/eshajawaid537-jpg/esha-luxee" target="_blank" class="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs text-center transition-all"><i class="fa-brands fa-github text-sm"></i></a>
                 </div>
             </div>
@@ -266,10 +265,10 @@
                     </div>
                     <h3 class="text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">APEX Agency</h3>
                     <p class="text-xs text-cyan-400 font-semibold mt-1 mb-4">Corporate Web Solutions</p>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Comprehensive corporate portal built with structured service tiers, technical showcase grids, and clear lead conversion pipelines.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Comprehensive corporate platform designed with structured service packages, fast loading times, and intuitive responsive navigation.</p>
                 </div>
                 <div class="flex gap-3 pt-4 border-t border-slate-800/80">
-                    <a href="https://apex-agency-project.vercel.app/" target="_blank" class="flex-1 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs text-center transition-all shadow-md shadow-indigo-600/20">Live Site <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
+                    <a href="https://apex-agency-project.vercel.app/" target="_blank" class="flex-1 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs text-center transition-all shadow-md shadow-indigo-600/20">Live Preview <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i></a>
                     <a href="https://github.com/eshajawaid537-jpg/apex-agency-project" target="_blank" class="px-4 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs text-center transition-all"><i class="fa-brands fa-github text-sm"></i></a>
                 </div>
             </div>
@@ -277,7 +276,69 @@
         </div>
     </section>
 
-    <!-- Experience & Education Section -->
+    <!-- Professional Workflow -->
+    <section id="workflow" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60">
+        <div class="mb-14 text-center md:text-left">
+            <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest block mb-1">Development Standards</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">How I Deliver Quality Projects</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-8 rounded-2xl glass-card relative group">
+                <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 font-extrabold text-sm mb-6">01</div>
+                <h3 class="text-xl font-bold text-white mb-2">Discovery & Planning</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Analyzing requirements, defining user flows, and planning high-performing architecture before writing code.</p>
+            </div>
+
+            <div class="p-8 rounded-2xl glass-card relative group">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 font-extrabold text-sm mb-6">02</div>
+                <h3 class="text-xl font-bold text-white mb-2">Modern Development</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Building clean, modular, and responsive interfaces with HTML, Tailwind CSS, JavaScript, and React for speed.</p>
+            </div>
+
+            <div class="p-8 rounded-2xl glass-card relative group">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-extrabold text-sm mb-6">03</div>
+                <h3 class="text-xl font-bold text-white mb-2">Optimization & Launch</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Executing cross-browser testing, mobile optimization, SEO structure checks, and fast deployments via Vercel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60">
+        <div class="mb-14 text-center md:text-left">
+            <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest block mb-1">Questions & Answers</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="max-w-4xl space-y-4">
+            <details class="group glass-card p-6 rounded-2xl cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white text-base">
+                    What technologies do you use for web development?
+                    <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-indigo-400"></i></span>
+                </summary>
+                <p class="text-slate-400 text-sm mt-4 leading-relaxed">I specialize in HTML5, Tailwind CSS, modern JavaScript (ES6+), React, C++, Git version control, and SEO optimization to build responsive, fast-loading web applications.</p>
+            </details>
+
+            <details class="group glass-card p-6 rounded-2xl cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white text-base">
+                    How long does it take to complete a project?
+                    <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-indigo-400"></i></span>
+                </summary>
+                <p class="text-slate-400 text-sm mt-4 leading-relaxed">Turnaround time depends on the project scope. A standard high-converting landing page takes 3-5 days, while complex web applications take 1-2 weeks.</p>
+            </details>
+
+            <details class="group glass-card p-6 rounded-2xl cursor-pointer">
+                <summary class="flex justify-between items-center font-bold text-white text-base">
+                    Will the website be fully mobile responsive?
+                    <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down text-indigo-400"></i></span>
+                </summary>
+                <p class="text-slate-400 text-sm mt-4 leading-relaxed">Yes, 100%! All websites are built with a Mobile-First approach, ensuring pixel-perfect layout and performance across mobile phones, tablets, and laptops.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Experience & Academic Background -->
     <section id="experience" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60">
         <div class="mb-14">
             <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest block mb-1">Background</span>
@@ -289,7 +350,7 @@
                 <div class="w-1.5 h-full bg-gradient-to-b from-indigo-500 to-purple-500 absolute left-0 top-0"></div>
                 <span class="text-[10px] font-extrabold text-indigo-400 uppercase tracking-widest block mb-2">Undergraduate Degree</span>
                 <h3 class="text-2xl font-bold text-white">BS Computer Science</h3>
-                <p class="text-sm text-slate-400 font-medium mt-1">TheWomen University Multan (5th Semester)</p>
+                <p class="text-sm text-slate-400 font-medium mt-1">The Women University Multan (5th Semester)</p>
                 <div class="mt-6 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold">
                     <i class="fa-solid fa-graduation-cap"></i> Cumulative GPA: 3.46 / 4.00
                 </div>
@@ -309,15 +370,15 @@
         </div>
     </section>
 
-    <!-- Call to Action (Contact) Section -->
+    <!-- Call to Action Section -->
     <section id="contact" class="max-w-7xl mx-auto px-6 py-20 border-t border-slate-800/60">
         <div class="rounded-3xl bg-gradient-to-tr from-indigo-950/80 via-slate-900 to-slate-950 border border-indigo-800/40 p-8 sm:p-16 text-center relative overflow-hidden shadow-2xl">
-            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Let's Build Something Iconic</h2>
-            <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base mb-10 leading-relaxed">Available for custom web applications, luxury e-commerce platforms, and technical collaborations.</p>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-4 tracking-tight">Have a Web Project in Mind?</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto text-sm sm:text-base mb-10 leading-relaxed">Let's connect and discuss how I can bring your custom web application or landing page to life with high quality and fast delivery.</p>
             
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="https://wa.me/923296094595?text=Hi%20Esha!%20I%20visited%20your%20portfolio%20and%20I'm%20impressed%20by%20your%20work.%20I%20would%20like%20to%20discuss%20a%20potential%20web%20project." target="_blank" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-xl shadow-emerald-600/20 transition-all">
-                    Start Project via WhatsApp <i class="fa-solid fa-arrow-right text-xs"></i>
+                    Connect on WhatsApp <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
                 <button onclick="copyEmail()" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm border border-slate-700 transition-all">
                     <i class="fa-regular fa-envelope text-indigo-400"></i> Copy Email Address
@@ -328,7 +389,7 @@
 
     <!-- Footer -->
     <footer class="max-w-7xl mx-auto px-6 py-8 border-t border-slate-800/40 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
-        <p>© 2026 Esha Jawaid. Engineered with Precision & Excellence.</p>
+        <p>© 2026 Esha Jawaid. Built with Precision & Integrity.</p>
         <div class="flex gap-6 mt-4 sm:mt-0">
             <a href="https://github.com/eshajawaid537-jpg" target="_blank" class="hover:text-indigo-400 transition-colors">GitHub</a>
             <a href="https://wa.me/923296094595" target="_blank" class="hover:text-indigo-400 transition-colors">WhatsApp</a>
