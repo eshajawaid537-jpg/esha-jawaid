@@ -24,11 +24,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- AOS Scroll Animations CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #030712;
             color: #f3f4f6;
+            overflow-x: hidden;
         }
         .heading-font {
             font-family: 'Space Grotesk', sans-serif;
@@ -37,12 +41,12 @@
             background: rgba(17, 24, 39, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
             border-color: rgba(99, 102, 241, 0.5);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.3);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 35px -10px rgba(99, 102, 241, 0.35);
         }
         .gradient-text {
             background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
@@ -100,20 +104,20 @@
 
     <!-- HERO SECTION -->
     <section class="pt-36 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-semibold text-emerald-400 mb-8 w-fit border border-emerald-500/30">
+        <div data-aos="fade-down" data-aos-duration="1000" class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-semibold text-emerald-400 mb-8 w-fit border border-emerald-500/30">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             AVAILABLE FOR FREELANCE & CLIENT PROJECTS
         </div>
 
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight heading-font leading-tight mb-6">
+        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight heading-font leading-tight mb-6">
             Building High-Impact <span class="gradient-text">Modern Web Applications</span> & UI Solutions
         </h1>
 
-        <p class="text-gray-400 text-lg md:text-xl max-w-3xl mb-10 font-normal leading-relaxed">
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" class="text-gray-400 text-lg md:text-xl max-w-3xl mb-10 font-normal leading-relaxed">
             Full-Stack Web Developer & Computer Science Scholar (3.46 CGPA). Crafting high-converting storefronts, corporate web portals, and scalable digital interfaces with precision engineering.
         </p>
 
-        <div class="flex flex-wrap gap-4 mb-16">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" class="flex flex-wrap gap-4 mb-16">
             <a href="#projects" class="gradient-btn px-8 py-4 rounded-xl font-semibold text-white shadow-xl flex items-center gap-3 transition-transform hover:-translate-y-0.5">
                 <i class="fa-solid fa-rocket"></i> View Live Deployments
             </a>
@@ -124,19 +128,19 @@
 
         <!-- STATS GRID -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-gray-800/80">
-            <div class="glass-card p-6 rounded-2xl">
+            <div data-aos="zoom-in" data-aos-delay="100" class="glass-card p-6 rounded-2xl">
                 <div class="text-3xl font-bold text-blue-400 heading-font mb-1">3.46</div>
                 <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">Academic CGPA (BS CS)</div>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
+            <div data-aos="zoom-in" data-aos-delay="200" class="glass-card p-6 rounded-2xl">
                 <div class="text-3xl font-bold text-purple-400 heading-font mb-1">100%</div>
                 <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">Mobile & Speed Optimized</div>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
+            <div data-aos="zoom-in" data-aos-delay="300" class="glass-card p-6 rounded-2xl">
                 <div class="text-3xl font-bold text-indigo-400 heading-font mb-1">Live</div>
                 <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">Production Web Apps</div>
             </div>
-            <div class="glass-card p-6 rounded-2xl">
+            <div data-aos="zoom-in" data-aos-delay="400" class="glass-card p-6 rounded-2xl">
                 <div class="text-3xl font-bold text-emerald-400 heading-font mb-1">Certified</div>
                 <div class="text-xs text-gray-400 font-medium uppercase tracking-wider">SEO & Freelancing</div>
             </div>
@@ -145,13 +149,13 @@
 
     <!-- CAPABILITIES / SKILLS -->
     <section id="skills" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="mb-12">
+        <div data-aos="fade-up" class="mb-12">
             <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Tech Architecture</span>
             <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Technical Stack & Core Capabilities</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-6 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-400 flex items-center justify-center text-xl">
                     <i class="fa-brands fa-html5"></i>
                 </div>
@@ -161,7 +165,7 @@
                 </div>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-6 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-xl">
                     <i class="fa-brands fa-js"></i>
                 </div>
@@ -171,7 +175,7 @@
                 </div>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div data-aos="fade-up" data-aos-delay="300" class="glass-card p-6 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl">
                     <i class="fa-brands fa-react"></i>
                 </div>
@@ -181,7 +185,7 @@
                 </div>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div data-aos="fade-up" data-aos-delay="400" class="glass-card p-6 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl">
                     <i class="fa-solid fa-code"></i>
                 </div>
@@ -191,7 +195,7 @@
                 </div>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div data-aos="fade-up" data-aos-delay="500" class="glass-card p-6 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl">
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                 </div>
@@ -201,7 +205,7 @@
                 </div>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div data-aos="fade-up" data-aos-delay="600" class="glass-card p-6 rounded-2xl flex items-center gap-4">
                 <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
@@ -215,14 +219,14 @@
 
     <!-- PORTFOLIO / PROJECTS -->
     <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="mb-12">
+        <div data-aos="fade-up" class="mb-12">
             <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Portfolio</span>
             <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Featured Live Deployments</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- PROJECT 1 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+            <div data-aos="fade-up" data-aos-delay="100" class="glass-card rounded-2xl p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-bold text-blue-400 heading-font">01</span>
@@ -242,7 +246,7 @@
             </div>
 
             <!-- PROJECT 2 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+            <div data-aos="fade-up" data-aos-delay="250" class="glass-card rounded-2xl p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-bold text-purple-400 heading-font">02</span>
@@ -262,7 +266,7 @@
             </div>
 
             <!-- PROJECT 3 -->
-            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+            <div data-aos="fade-up" data-aos-delay="400" class="glass-card rounded-2xl p-6 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
                         <span class="text-xs font-bold text-indigo-400 heading-font">03</span>
@@ -285,13 +289,13 @@
 
     <!-- WORKFLOW -->
     <section id="workflow" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="mb-12">
+        <div data-aos="fade-up" class="mb-12">
             <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Development Standards</span>
             <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">How I Deliver Quality Projects</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 rounded-2xl">
+            <div data-aos="fade-right" data-aos-delay="100" class="glass-card p-6 rounded-2xl">
                 <div class="text-2xl font-bold text-blue-400 heading-font mb-3">01</div>
                 <h3 class="text-lg font-bold mb-2">Discovery & Planning</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">
@@ -299,7 +303,7 @@
                 </p>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl">
+            <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-6 rounded-2xl">
                 <div class="text-2xl font-bold text-purple-400 heading-font mb-3">02</div>
                 <h3 class="text-lg font-bold mb-2">Modern Development</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">
@@ -307,7 +311,7 @@
                 </p>
             </div>
 
-            <div class="glass-card p-6 rounded-2xl">
+            <div data-aos="fade-left" data-aos-delay="300" class="glass-card p-6 rounded-2xl">
                 <div class="text-2xl font-bold text-emerald-400 heading-font mb-3">03</div>
                 <h3 class="text-lg font-bold mb-2">Optimization & Launch</h3>
                 <p class="text-sm text-gray-400 leading-relaxed">
@@ -319,13 +323,13 @@
 
     <!-- FAQ -->
     <section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
-        <div class="mb-12 text-center">
+        <div data-aos="fade-up" class="mb-12 text-center">
             <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Questions & Answers</span>
             <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Frequently Asked Questions</h2>
         </div>
 
         <div class="space-y-4">
-            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+            <details data-aos="fade-up" data-aos-delay="100" class="glass-card rounded-2xl p-6 group cursor-pointer">
                 <summary class="font-bold text-lg flex justify-between items-center list-none">
                     What technologies do you use for web development?
                     <span class="text-blue-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
@@ -335,7 +339,7 @@
                 </p>
             </details>
 
-            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+            <details data-aos="fade-up" data-aos-delay="200" class="glass-card rounded-2xl p-6 group cursor-pointer">
                 <summary class="font-bold text-lg flex justify-between items-center list-none">
                     How long does it take to complete a project?
                     <span class="text-blue-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
@@ -345,8 +349,8 @@
                 </p>
             </details>
 
-            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
-                <summaryclass="font-bold text-lg flex justify-between items-center list-none">
+            <details data-aos="fade-up" data-aos-delay="300" class="glass-card rounded-2xl p-6 group cursor-pointer">
+                <summary class="font-bold text-lg flex justify-between items-center list-none">
                     Will the website be fully mobile responsive?
                     <span class="text-blue-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
                 </summary>
@@ -359,13 +363,13 @@
 
     <!-- EDUCATION / ACADEMICS -->
     <section id="about" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="mb-12">
+        <div data-aos="fade-up" class="mb-12">
             <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Background</span>
             <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Education & Credentials</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card p-8 rounded-2xl">
+            <div data-aos="fade-right" data-aos-delay="100" class="glass-card p-8 rounded-2xl">
                 <span class="text-xs text-blue-400 font-bold uppercase tracking-wider">Undergraduate Degree</span>
                 <h3 class="text-2xl font-bold heading-font mt-2 mb-1">BS Computer Science</h3>
                 <p class="text-gray-400 text-sm mb-4">The Women University Multan</p>
@@ -374,7 +378,7 @@
                 </div>
             </div>
 
-            <div class="glass-card p-8 rounded-2xl">
+            <div data-aos="fade-left" data-aos-delay="200" class="glass-card p-8 rounded-2xl">
                 <span class="text-xs text-purple-400 font-bold uppercase tracking-wider">Professional Certifications</span>
                 <h3 class="text-2xl font-bold heading-font mt-2 mb-1">DigiSkills Training Program</h3>
                 <p class="text-gray-400 text-sm mb-4">Ministry of IT & Telecom Pakistan</p>
@@ -402,5 +406,14 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- AOS JS Library & Initialization -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+    </script>
 </body>
 </html>
