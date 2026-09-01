@@ -3,275 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Updated Title & Open Graph Meta Tags for Professional WhatsApp Link Preview -->
+    
+    <!-- Title & SEO Open Graph Meta Tags for Professional Link Previews -->
     <title>Esha Jawaid | Creative UI/UX Developer & Frontend Specialist</title>
     <meta name="title" content="Esha Jawaid | Creative UI/UX Developer & Frontend Specialist">
-    <meta property="og:title" content="Esha Jawaid | Creative UI/UX Developer & Frontend Specialist">
+    <meta name="description" content="Portfolio of Esha Jawaid - Crafting high-converting storefronts, corporate web portals, and scalable digital interfaces with precision engineering.">
+    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://esha-jawaid.vercel.app/">
-    <meta property="og:description" content="Portfolio of Esha Jawaid - High-performance storefronts, corporate web portals, and scalable digital interfaces with precision engineering.">
+    <meta property="og:title" content="Esha Jawaid | Creative UI/UX Developer & Frontend Specialist">
+    <meta property="og:description" content="Full-Stack Web Developer & Computer Science Scholar (3.46 CGPA). Crafting high-converting storefronts and scalable digital interfaces.">
+    
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Esha Jawaid | Creative UI/UX Developer & Frontend Specialist">
 
-    <!-- Font Awesome Icons & Google Fonts -->
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+    
     <style>
-        :root {
-            --bg-dark: #070714;
-            --card-bg: #0d0f26;
-            --card-border: rgba(139, 92, 246, 0.15);
-            --accent-purple: #6366f1;
-            --accent-blue: #4f46e5;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --glow: 0 0 25px rgba(99, 102, 241, 0.4);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 24px 16px;
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 50% 100%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
-            background-attachment: fixed;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
         }
-
-        .container {
-            width: 100%;
-            max-width: 480px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
         }
-
-        /* Top Header Navigation Bar */
-        .top-nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .profile-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .avatar-box {
-            width: 52px;
-            height: 52px;
-            background: linear-gradient(135deg, #4f46e5, #9333ea);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 20px;
-            color: #ffffff;
-            box-shadow: var(--glow);
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-text h1 {
-            font-size: 18px;
-            font-weight: 800;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            color: #ffffff;
-            line-height: 1.2;
-        }
-
-        .brand-text span {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: #818cf8;
-            text-transform: uppercase;
-        }
-
-        .talk-btn {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-            padding: 10px 18px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .talk-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
-        }
-
-        /* Bio Description Banner */
-        .bio-description {
-            text-align: center;
-            color: #d1d5db;
-            font-size: 14.5px;
-            line-height: 1.6;
-            margin: 8px 0 12px 0;
-            padding: 0 8px;
-        }
-
-        /* Action Buttons Section (GitHub Removed) */
-        .cta-section {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            width: 100%;
-            align-items: center;
-        }
-
-        .btn-live {
-            width: 85%;
-            background: linear-gradient(135deg, #5b50f6 0%, #7c3aed 100%);
-            color: white;
-            text-decoration: none;
-            padding: 16px 24px;
-            border-radius: 16px;
-            font-size: 15px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 8px 25px rgba(91, 80, 246, 0.4);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-live:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(91, 80, 246, 0.6);
-        }
-
-        /* Stats Grid (2x2 Layout) */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .stat-card {
-            background: rgba(13, 15, 38, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 24px 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
             backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.3s ease;
         }
-
-        .stat-card:hover {
-            border-color: rgba(139, 92, 246, 0.3);
-            transform: translateY(-3px);
-            background: rgba(17, 20, 50, 0.85);
+        .glass-card:hover {
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.2);
         }
-
-        .stat-val {
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 8px;
-            line-height: 1;
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        .stat-label {
-            font-size: 11px;
-            font-weight: 700;
-            color: #9ca3af;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            line-height: 1.4;
+        .gradient-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            transition: all 0.3s ease;
         }
-
-        .val-purple { color: #a5b4fc; }
-        .val-light-purple { color: #c084fc; }
-        .val-pink { color: #f472b6; }
-        .val-green { color: #34d399; }
+        .gradient-btn:hover {
+            background: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
+        }
     </style>
 </head>
-<body>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
 
-    <div class="container">
-        <!-- Header Section -->
-        <header class="top-nav">
-            <div class="profile-brand">
-                <div class="avatar-box">EJ</div>
-                <div class="brand-text">
-                    <h1>Esha Jawaid</h1>
-                    <span>Full-Stack Architect</span>
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl gradient-btn flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/20">
+                    EJ
                 </div>
-            </div>
-            <a href="https://wa.me/" class="talk-btn" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Let's Talk
+                <div>
+                    <span class="block font-bold text-lg tracking-tight heading-font">ESHA JAWAID</span>
+                    <span class="block text-xs text-blue-400 font-medium">Full-Stack Architect</span>
+                </div>
             </a>
-        </header>
 
-        <!-- Description -->
-        <p class="bio-description">
-            storefronts, corporate web portals, and scalable digital interfaces with precision engineering.
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Capabilities</a>
+                <a href="#projects" class="hover:text-blue-400 transition-colors">Portfolio</a>
+                <a href="#workflow" class="hover:text-blue-400 transition-colors">Workflow</a>
+                <a href="#faq" class="hover:text-blue-400 transition-colors">FAQ</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/" target="_blank" class="gradient-btn px-5 py-2.5 rounded-xl font-medium text-sm text-white transition-all shadow-lg shadow-blue-500/20 flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Let's Talk
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="pt-36 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex flex-col justify-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-xs font-semibold text-blue-400 mb-8 w-fit border border-blue-500/30">
+            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            OPEN FOR FREELANCE & CLIENT PROJECTS
+        </div>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight heading-font leading-tight mb-6">
+            Building High-Impact <span class="gradient-text">Modern Web Applications</span> & UI Solutions
+        </h1>
+
+        <p class="text-gray-400 text-lg md:text-xl max-w-3xl mb-10 font-normal leading-relaxed">
+            Full-Stack Web Developer & Computer Science Scholar (3.46 CGPA). Crafting high-converting storefronts, corporate web portals, and scalable digital interfaces with precision engineering.
         </p>
 
-        <!-- Action Buttons -->
-        <div class="cta-section">
-            <a href="#" class="btn-live">
+        <div class="flex flex-wrap gap-4 mb-16">
+            <a href="#projects" class="gradient-btn px-8 py-4 rounded-xl font-semibold text-white shadow-xl shadow-blue-500/20 flex items-center gap-3 transition-transform hover:-translate-y-0.5">
                 <i class="fa-solid fa-rocket"></i> View Live Deployments
+            </a>
+            <a href="mailto:eshajawaid537@gmail.com" class="glass-card px-8 py-4 rounded-xl font-semibold text-gray-200 hover:text-white flex items-center gap-3 transition-all hover:bg-gray-800">
+                <i class="fa-regular fa-paper-plane"></i> Contact via Email
             </a>
         </div>
 
-        <!-- 2x2 Stats Grid -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-val val-purple">3.46</span>
-                <span class="stat-label">Academic CGPA<br>(BS CS)</span>
+        <!-- STATS GRID -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-gray-800/80">
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-3xl font-bold text-blue-400 heading-font mb-1">3.46</div>
+                <div class="text-xs text-gray-400 font-medium">Academic CGPA (BS CS)</div>
             </div>
-            <div class="stat-card">
-                <span class="stat-val val-light-purple">100%</span>
-                <span class="stat-label">Mobile & Speed<br>Optimized</span>
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-3xl font-bold text-purple-400 heading-font mb-1">100%</div>
+                <div class="text-xs text-gray-400 font-medium">Mobile & Speed Optimized</div>
             </div>
-            <div class="stat-card">
-                <span class="stat-val val-pink">Live</span>
-                <span class="stat-label">Production Web<br>Apps</span>
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-3xl font-bold text-indigo-400 heading-font mb-1">Live</div>
+                <div class="text-xs text-gray-400 font-medium">Production Web Apps</div>
             </div>
-            <div class="stat-card">
-                <span class="stat-val val-green">Certified</span>
-                <span class="stat-label">SEO &<br>Freelancing</span>
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-3xl font-bold text-pink-400 heading-font mb-1">Certified</div>
+                <div class="text-xs text-gray-400 font-medium">SEO & Freelancing</div>
             </div>
         </div>
-    </div>
+    </section>
 
-</body>
-</html>
+    <!-- CAPABILITIES / SKILLS -->
+    <section id="skills" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Tech Architecture</span>
+            <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Technical Stack & Core Capabilities</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-400 flex items-center justify-center text-xl">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg heading-font">HTML5 & CSS3</h4>
+                    <p class="text-xs text-gray-400">Semantic Markup & Styling</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-xl">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg heading-font">JavaScript</h4>
+                    <p class="text-xs text-gray-400">ES6+ / Dynamic DOM Manipulation</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl">
+                    <i class="fa-brands fa-react"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg heading-font">React & Tailwind</h4>
+                    <p class="text-xs text-gray-400">Modern UI Frameworks</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg heading-font">C++ Engine</h4>
+                    <p class="text-xs text-gray-400">OOP & Problem Solving</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg heading-font">Vercel Deployment</h4>
+                    <p class="text-xs text-gray-400">Cloud Hosting & Optimization</p>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg heading-font">SEO Strategy</h4>
+                    <p class="text-xs text-gray-400">DigiSkills Certified</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / PROJECTS -->
+    <section id="projects" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Portfolio</span>
+            <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Featured Live Projects</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- PROJECT 1 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold text-blue-400 heading-font">01</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">Agency Portal</span>
+                    </div>
+                    <h3 class="text-xl font-bold heading-font mb-2">VORTEX Digital</h3>
+                    <p class="text-xs text-gray-400 font-medium mb-3">Digital Transformation Platform</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                        Ultra-sleek agency portal engineered with interactive service matrices, glassmorphism aesthetics, and clean performance optimization.
+                    </p>
+                </div>
+                <div>
+                    <a href="https://vortex-digital-alpha.vercel.app/" target="_blank" class="gradient-btn w-full py-3 rounded-xl text-center text-sm font-semibold text-white block transition-all">
+                        Live Preview <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold text-purple-400 heading-font">02</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-purple-500/10 text-purple-300 border border-purple-500/20">E-Commerce</span>
+                    </div>
+                    <h3 class="text-xl font-bold heading-font mb-2">ESHA LUXEE</h3>
+                    <p class="text-xs text-gray-400 font-medium mb-3">Luxury E-Commerce Storefront</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                        High-converting luxury fashion storefront with responsive product showcases, fluid UI micro-interactions, and cart workflow layout.
+                    </p>
+                </div>
+                <div>
+                    <a href="https://esha-luxee.vercel.app/" target="_blank" class="gradient-btn w-full py-3 rounded-xl text-center text-sm font-semibold text-white block transition-all">
+                        Live Preview <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold text-indigo-400 heading-font">03</span>
+                        <span class="text-xs px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Corporate Tech</span>
+                    </div>
+                    <h3 class="text-xl font-bold heading-font mb-2">APEX Agency</h3>
+                    <p class="text-xs text-gray-400 font-medium mb-3">Corporate Web Solutions</p>
+                    <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                        Comprehensive corporate platform designed with structured service packages, fast loading times, and intuitive responsive navigation.
+                    </p>
+                </div>
+                <div>
+                    <a href="https://apex-agency-project.vercel.app/" target="_blank" class="gradient-btn w-full py-3 rounded-xl text-center text-sm font-semibold text-white block transition-all">
+                        Live Preview <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section id="workflow" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Development Standards</span>
+            <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">How I Deliver Quality Projects</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-2xl font-bold text-blue-400 heading-font mb-3">01</div>
+                <h3 class="text-lg font-bold mb-2">Discovery & Planning</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Analyzing requirements, defining user flows, and planning high-performing architecture before writing code.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-2xl font-bold text-purple-400 heading-font mb-3">02</div>
+                <h3 class="text-lg font-bold mb-2">Modern Development</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Building clean, modular, and responsive interfaces with HTML, Tailwind CSS, JavaScript, and React for speed.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-2xl font-bold text-pink-400 heading-font mb-3">03</div>
+                <h3 class="text-lg font-bold mb-2">Optimization & Launch</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    Executing cross-browser testing, mobile optimization, SEO structure checks, and fast deployments via Vercel.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
+        <div class="mb-12 text-center">
+            <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Questions & Answers</span>
+            <h2 class="text-3xl md:text-4xl font-bold heading-font mt-2">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-4">
+            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+                <summary class="font-bold text-lg flex justify-between items-center list-none">
+                    What technologies do you use for web development?
+                    <span class="text-blue-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <p class="mt-4 text-sm text-gray-400 leading-relaxed">
+                    I specialize in HTML5, Tailwind CSS, modern JavaScript (ES6+), React, C++, and SEO optimization to build responsive, fast-loading web applications.
+                </p>
+            </details>
+
+            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+                <summary class="font-bold text-lg flex justify-between items-center list-none">
+                    How long does it take to complete a project?
+                    <span class="text-blue-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <p class="mt-4 text-sm text-gray-400 leading-relaxed">
+                    Turnaround time depends on the project scope. A standard high-converting landing page takes 3-5 days, while complex web applications take 1-2 weeks.
+                </p>
+            </details>
+
+            <details class="glass-card rounded-2xl p-6 group cursor-pointer">
+                <summary class="font-bold text-lg flex justify-between items-center list-none">
+                    Will the website be fully mobile responsive?
+                    <span class="text-blue-400 group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                </summary>
+                <p class="mt-4 text-sm text-gray-400 leading-relaxed">
+                    Yes, 100%! All websites are built with a Mobile-First approach, ensuring pixel-perfect layout and performance across mobile phones, tablets, and laptops.
+                </p>
+            </details>
+        </div>
+    </section>
+
+    <!-- EDUCATION / ACADEMICS & CONTACT -->
+    <section id="about" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <span class="text-xs font-bold text-blue-400 tracking-widest uppercase">Background</span>
+            <h2 class="text-3xl md:text-4xl font-bold heading-fo
